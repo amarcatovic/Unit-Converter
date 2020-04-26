@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=PT+Sans+Narrow:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8710f761f9.js" crossorigin="anonymous"></script>
+    <title>Konverter</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="konverter">
+            <h1 id="ime-jedinice">Dužina</h1>
+            <div class="konvert-input">
+                <div class="input">
+                    <form name="form_left">
+                        <input type="text" class="validate" placeholder="Unesite Jedinicu za pretvaranje" name="text_input" onKeyUp="CalculateUnit(document.form_left, document.form_right)">
+                        <select name="select_jedinica" onchange="CalculateUnit(document.form_left, document.form_right)"></select>
+                    </form>
+                </div>
+                <div class="jednako"><i class="fas fa-equals fa-2x"></i></div>  
+                <div class="input">
+                    <form name="form_right">
+                        <input type="text" class="validate" placeholder="Pretvorena jedinica" name="text_input" onKeyUp="CalculateUnit(document.form_right, document.form_left)">
+                        <select name="select_jedinica" onchange="CalculateUnit(document.form_left, document.form_right)"></select>
+                    </form>
+                </div>  
+            </div>
+            <h4 class="hidden" id="input-greska">Pogrešan Unos</h4>
+            <div class="cinjenice">
+                <h3>Random Fact:</h3>
+                <p id="fact-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem numquam ipsa, rem quidem vero aliquid in? Totam molestiae quod ipsam quisquam asperiores, id magnam, similique voluptates in illo corrupti mollitia quaerat reprehenderit. Vitae, qui fugit.</p>
+            </div>
+        </div>
+        <div class="lower-menu">
+            <div class="icon" onclick="promijeniJedinice('duzina')">
+                <i class="fas fa-ruler fa-2x"></i>
+                <h5>Dužina</h5>
+            </div>
+            <div class="icon" onclick="promijeniJedinice('masa')">
+                <i class="fas fa-weight-hanging fa-2x"></i>
+                <h5>Masa</h5>
+            </div>
+            <div class="icon" onclick="promijeniJedinice('volumen')">
+                <i class="fab fa-bitbucket fa-2x"></i>
+                <h5>Volumen</h5>
+            </div>
+            <div class="icon" onclick="promijeniJedinice('povrsina')">
+                <i class="fas fa-square fa-2x"></i>
+                <h5>Površina</h5>
+            </div>
+            <div class="icon" onclick="promijeniJedinice('brzina')">
+                <i class="fas fa-tachometer-alt fa-2x"></i>
+                <h5>Brzina</h5>
+            </div>
+            <div class="icon" onclick="promijeniJedinice('pritisak')">
+                <i class="fas fa-compress-arrows-alt fa-2x"></i>
+                <h5>Pritisak</h5>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/konverter.js"></script>
+</body>
+</html>

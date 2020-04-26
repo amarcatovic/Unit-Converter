@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url('imgs/duzina.jpg');
+    background-size: cover;
+    color: white;
+}
+
+.konverter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 30px;
+    height: 50vh;
+    width: 70%;
+    border-radius: 45px;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+.rotiraj{
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+
+.konverter h1{
+    font-family: 'Bangers', cursive;
+    font-size: 5rem;
+}
+
+.konverter h4{
+    color: red;
+    font-size: 2rem;
+}
+
+.cinjenice{
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+.cinjenice h3{
+    font-size: 2rem;
+}
+
+.konvert-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+}
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    margin: 20px;
+}
+
+.input input{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+select{
+    background-color: #3c574a;
+    color: #fff;
+    font-size: inherit;
+    padding: 10px;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    border-radius: 0px;
+    text-indent: 0.01px;
+    text-overflow: '';
+  }
+
+.lower-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 70%;
+    padding: 50px;
+}
+
+.icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+    color: rgba(255, 255, 255, 0.678);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 120px;
+    border-radius: 90px;
+    box-shadow: inset 0 0 10px #000000;
+}
+
+.icon:hover{
+    top: -10px;
+    color: rgba(0, 0, 0, 0.753);
+    cursor: pointer;
+}
+
+.icon h5{
+    margin-top: 20px;
+    font-size: 1.5rem;
+} 
+
+@media only screen and (max-width: 800px) {
+
+    body{
+        height: 200vh;
+    }
+
+    .wrapper{
+        justify-content: flex-start;
+        height: 220vh;
+    }
+
+    .konverter{
+        width: 100%;
+        height: 80vh;
+        background: none;
+        box-shadow: none;
+        margin-bottom: 10px;
+    }
+
+    .konverter h1{
+        font-size: 3.5rem;
+    }
+
+    .konvert-input{
+        flex-direction: column;
+    }
+
+    .lower-menu{
+        flex-direction: column;
+    }
+
+    .icon{
+        margin-top: 20px;
+    }
+}
+
+@keyframes spinner {
+    from {
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+    to {
+      -moz-transform: rotateY(-360deg);
+      -ms-transform: rotateY(-360deg);
+      transform: rotateY(-360deg);
+    }
+  }
